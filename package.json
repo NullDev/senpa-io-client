@@ -1,0 +1,24 @@
+{
+  "name": "senpa-io-client",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official client for Senpa.io",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "electron src/app.js",
+    "build:windows": "electron-builder",
+    "build:linux": "electron-builder",
+    "build:mac": "electron-builder"
+  },
+  "author": "NullDev",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/eslint-parser": "^7.18.2",
+    "eslint": "^8.18.0"
+  },
+  "dependencies": {
+    "electron": "^19.0.6",
+    "electron-web-blocker": "^1.0.5"
+  }
+}
