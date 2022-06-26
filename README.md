@@ -1,5 +1,5 @@
 # Senpa.io Client
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NullDev/senpa-io-client/Build%20Senpa.io-Client) ![GitHub all releases](https://img.shields.io/github/downloads/NullDev/senpa-io-client/total) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/NullDev/senpa-io-client) ![GitHub](https://img.shields.io/github/license/NullDev/senpa-io-client)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NullDev/senpa-io-client/Build%20Senpa.io-Client) ![GitHub all releases](https://img.shields.io/github/downloads/NullDev/senpa-io-client/total) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/NullDev/senpa-io-client) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NullDev/senpa-io-client/CodeQL?label=CodeQL) ![GitHub](https://img.shields.io/github/license/NullDev/senpa-io-client)
 
 <br>
 
