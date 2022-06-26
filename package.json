@@ -1,6 +1,6 @@
 {
   "name": "senpa-io-client",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Official client for Senpa.io",
   "author": "NullDev",
@@ -24,7 +24,9 @@
     "url": "https://github.com/NullDev/senpa-io-client/issues"
   },
   "keywords": [
-    "NullDev", "Senpa.io", "Client"
+    "NullDev",
+    "Senpa.io",
+    "Client"
   ],
   "devDependencies": {
     "@babel/core": "^7.18.5",
