@@ -2,6 +2,18 @@
 
 <p align="center"><img height="150" width="auto" src="https://senpa.io/full-logo.png" /></p>
 <p align="center"><b>Official Client for <a href="https://senpa.io">Senpa.io</a></b></p>
+
+<hr>
+
+## :arrow_down: Download
+
+[Latest release / changelog](https://github.com/NullDev/senpa-io-client/releases/latest)
+- [Windows installer](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-setup-win.exe)
+- [Windows portable](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-win.exe)
+- [macOS portable](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-mac-x64.dmg)
+- [Linux portable (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-x86_64.AppImage)
+- [Linux portable (i386)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-i386.AppImage)
+
 <hr>
 
 ## :wrench: Installation
@@ -18,9 +30,7 @@ Then navigate to the folder.<br><br>
 $ `npm install`<br><br>
 6. Start it by running <br>
 $ `npm start` <br>
-or build it for a certain OS: <br>
-$ `npm run build:windows` <br>
-$ `npm run build:mac` <br>
-$ `npm run build:linux` <br><br>
+or build it: <br>
+$ `npm run dist` <br><br>
 
 <hr>
