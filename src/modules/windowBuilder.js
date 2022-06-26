@@ -50,7 +50,7 @@ class WindowBuilder {
      * @returns {Object}
      * @memberof WindowBuilder
      */
-    static get #spawnWindowOptions(){
+    static get #splashWindowOptions(){
         return {
             width: 600,
             height: 300,
@@ -106,7 +106,7 @@ class WindowBuilder {
      * @memberof WindowBuilder
      */
     static #splashScreen(){
-        const win = new BrowserWindow(WindowBuilder.#spawnWindowOptions);
+        const win = new BrowserWindow(WindowBuilder.#splashWindowOptions);
         win.loadFile(path.join(__dirname, "..", "layout", "splash.html"));
         return win;
     }
