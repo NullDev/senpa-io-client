@@ -57,6 +57,7 @@ class CliSwitches {
      * Apply CLI switches.
      *
      * @static
+     * @public
      * @param {import("electron").App} app
      * @memberof CliSwitches
      */

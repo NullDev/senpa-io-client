@@ -156,6 +156,7 @@ class WindowBuilder {
      * Prepare and create the browser windows.
      *
      * @static
+     * @public
      * @memberof WindowBuilder
      */
     static createWindow(){
