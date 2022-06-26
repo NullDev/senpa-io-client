@@ -3,22 +3,38 @@
   "version": "1.0.0",
   "private": true,
   "description": "Official client for Senpa.io",
+  "author": "NullDev",
+  "license": "AGPL-3.0-only",
+  "engines": {
+    "node": ">=18.2.0"
+  },
   "main": "src/app.js",
   "scripts": {
     "start": "electron src/app.js",
-    "build:windows": "electron-builder",
-    "build:linux": "electron-builder",
-    "build:mac": "electron-builder"
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "release": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
   },
-  "author": "NullDev",
-  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NullDev/senpa-io-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NullDev/senpa-io-client/issues"
+  },
+  "keywords": [
+    "NullDev", "Senpa.io", "Client"
+  ],
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/eslint-parser": "^7.18.2",
+    "electron": "^19.0.6",
+    "electron-builder": "^23.1.0",
     "eslint": "^8.18.0"
   },
   "dependencies": {
-    "electron": "^19.0.6",
-    "electron-web-blocker": "^1.0.5"
+    "electron-web-blocker": "^1.0.5",
+    "v8-compile-cache": "^2.3.0"
   }
 }
