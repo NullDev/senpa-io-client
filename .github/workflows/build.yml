@@ -1,6 +1,9 @@
 name: Build Senpa.io-Client
 
-on: push
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:

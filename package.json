@@ -12,7 +12,7 @@
   "scripts": {
     "start": "electron src/app.js",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder",
+    "dist": "electron-builder --publish always",
     "release": "electron-builder",
     "postinstall": "electron-builder install-app-deps"
   },
