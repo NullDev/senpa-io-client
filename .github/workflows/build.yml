@@ -1,4 +1,4 @@
-name: Build Senpa.io-Client
+name: Build
 
 on:
   push:
