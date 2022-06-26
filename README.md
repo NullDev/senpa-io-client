@@ -1,4 +1,7 @@
 # Senpa.io Client
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NullDev/senpa-io-client/Build%20Senpa.io-Client) ![GitHub all releases](https://img.shields.io/github/downloads/NullDev/senpa-io-client/total) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/NullDev/senpa-io-client) ![GitHub](https://img.shields.io/github/license/NullDev/senpa-io-client)
+
+<br>
 
 <p align="center"><img height="150" width="auto" src="https://senpa.io/full-logo.png" /></p>
 <p align="center"><b>Official Client for <a href="https://senpa.io">Senpa.io</a></b></p>
