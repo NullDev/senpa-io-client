@@ -16,6 +16,12 @@ const disableConsole = function(){
     for (const el in console) window.console[el] = () => {};
 };
 
+/**
+ * Async task to wait for a DOM element to exist.
+ *
+ * @param {String} selector
+ * @returns {Promise<Element | null>}
+ */
 const waitForElement = function(selector){
     return new Promise(resolve => {
         if (document.querySelector(selector)) return resolve(document.querySelector(selector));
@@ -36,7 +42,7 @@ const waitForElement = function(selector){
 
     document.addEventListener("DOMContentLoaded", () => {
         BANNER_IDS.forEach(id => waitForElement(id)
-            .then(el => (el.style.display = "none"))
+            .then(el => ( /** @type {HTMLImageElement} */ (el).style.display = "none"))
         );
     });
 
