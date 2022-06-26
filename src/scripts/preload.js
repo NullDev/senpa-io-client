@@ -20,16 +20,20 @@ const disableConsole = function(){
  * Async task to wait for a DOM element to exist.
  *
  * @param {String} selector
- * @returns {Promise<Element | null>}
+ * @returns {Promise<HTMLElement>}
  */
 const waitForElement = function(selector){
     return new Promise(resolve => {
-        if (document.querySelector(selector)) return resolve(document.querySelector(selector));
+        /** @type {HTMLImageElement | null} */
+        const existing = document.querySelector(selector);
+        if (existing) return resolve(existing);
 
         const observer = new MutationObserver(() => {
-            if (document.querySelector(selector)){
-                resolve(document.querySelector(selector));
+            /** @type {HTMLImageElement | null} */
+            const newElement = document.querySelector(selector);
+            if (newElement){
                 observer.disconnect();
+                resolve(newElement);
             }
         });
 
@@ -42,7 +46,7 @@ const waitForElement = function(selector){
 
     document.addEventListener("DOMContentLoaded", () => {
         BANNER_IDS.forEach(id => waitForElement(id)
-            .then(el => ( /** @type {HTMLImageElement} */ (el).style.display = "none"))
+            .then(el => (el.style.display = "none"))
         );
     });
 
