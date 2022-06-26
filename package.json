@@ -1,6 +1,6 @@
 {
   "name": "senpa-io-client",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "description": "Official client for Senpa.io",
   "author": "NullDev",

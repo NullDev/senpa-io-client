@@ -16,14 +16,24 @@ const disableConsole = function(){
     for (const el in console) window.console[el] = () => {};
 };
 
+/**
+ * Async task to wait for a DOM element to exist.
+ *
+ * @param {String} selector
+ * @returns {Promise<HTMLElement>}
+ */
 const waitForElement = function(selector){
     return new Promise(resolve => {
-        if (document.querySelector(selector)) return resolve(document.querySelector(selector));
+        /** @type {HTMLImageElement | null} */
+        const existing = document.querySelector(selector);
+        if (existing) return resolve(existing);
 
         const observer = new MutationObserver(() => {
-            if (document.querySelector(selector)){
-                resolve(document.querySelector(selector));
+            /** @type {HTMLImageElement | null} */
+            const newElement = document.querySelector(selector);
+            if (newElement){
                 observer.disconnect();
+                resolve(newElement);
             }
         });
 
