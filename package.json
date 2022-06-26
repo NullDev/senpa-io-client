@@ -13,6 +13,7 @@
     "start": "electron src/app.js",
     "pack": "electron-builder --dir",
     "dist": "electron-builder --publish always",
+    "build": "electron-builder",
     "release": "electron-builder",
     "postinstall": "electron-builder install-app-deps"
   },

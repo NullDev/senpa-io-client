@@ -42,7 +42,7 @@ Then navigate to the folder.<br><br>
 $ `npm install`<br><br>
 6. Start it by running <br>
 $ `npm start` <br>
-or build it: <br>
-$ `npm run dist` <br><br>
+or build it for your platform: <br>
+$ `npm run build` <br><br>
 
 <hr>
