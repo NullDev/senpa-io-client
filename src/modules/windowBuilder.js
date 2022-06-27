@@ -133,7 +133,7 @@ class WindowBuilder {
 
         win.webContents.on("will-navigate", (event, url) => {
             event.preventDefault();
-            (url.includes("senpa.io") && !url.endsWith("privacy.txt") && !url.endsWith("terms.txt"))
+            (url.startsWith("https://senpa.io") && !url.endsWith("privacy.txt") && !url.endsWith("terms.txt"))
                 ? win.loadURL(url)
                 : shell.openExternal(url);
         });
