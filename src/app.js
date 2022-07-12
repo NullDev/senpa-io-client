@@ -11,6 +11,8 @@ const { app } = require("electron");
 const CliSwitches = require("./modules/cliSwitches");
 const WindowBuilder = require("./modules/windowBuilder");
 
+const env = process.env?.NODE_ENV || "development";
+
 console.log(`
    ____                           _       
   / ___|  ___ _ __  _ __   __ _  (_) ___  
@@ -20,7 +22,7 @@ console.log(`
                    |_|                    
 
 Senpa.io :: Official Client v${app.getVersion()}
-{ Electron: ${process.versions.electron}, Node: ${process.versions.node}, Chromium: ${process.versions.chrome} }
+{ Environment: ${env}, Electron: ${process.versions.electron}, Node: ${process.versions.node}, Chromium: ${process.versions.chrome}, V8: ${process.versions.v8} }
 `);
 
 // Preparation
