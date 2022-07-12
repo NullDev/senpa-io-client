@@ -49,7 +49,7 @@ class CliSwitches {
             ["enable-zero-copy"],
             ["no-pings"],
             ["no-proxy-server"],
-            ["disable-gpu-vsync"]
+            ["disable-gpu-vsync"],
         ];
     }
 
