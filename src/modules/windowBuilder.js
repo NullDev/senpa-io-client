@@ -9,6 +9,8 @@ const path = require("node:path");
 const { app, BrowserWindow, shell } = require("electron");
 const webBlocker = require("electron-web-blocker");
 
+const env = process.env?.NODE_ENV || "development";
+
 /**
  * Build browser window.
  *
@@ -37,8 +39,8 @@ class WindowBuilder {
                 contextIsolation: false,
                 nodeIntegration: false,
                 spellcheck: false,
-                devTools: false
-            }
+                devTools: env === "development",
+            },
         };
     }
 
@@ -64,8 +66,8 @@ class WindowBuilder {
                 contextIsolation: false,
                 nodeIntegration: false,
                 spellcheck: false,
-                devTools: false
-            }
+                devTools: env === "development",
+            },
         };
     }
 
@@ -76,8 +78,8 @@ class WindowBuilder {
      * @returns {Promise<any>}
      * @memberof WindowBuilder
      */
-    static #initBlocker(){
-        return webBlocker.init({
+    static async #initBlocker(){
+        return await webBlocker.init({
             updateNow: true,
             blacklist: [
                 "doubleclick.net",
@@ -93,8 +95,8 @@ class WindowBuilder {
                 "adservice.google.*",
                 "adsense.google.com",
                 "doubleclickbygoogle.com",
-                "*.doubleclickbygoogle.com"
-            ]
+                "*.doubleclickbygoogle.com",
+            ],
         });
     }
 
@@ -121,10 +123,13 @@ class WindowBuilder {
     static #mainWindow(){
         const win = new BrowserWindow(WindowBuilder.#mainWindowOptions);
 
-        win.removeMenu();
-        win.setMenuBarVisibility(false);
+        if (env !== "development"){
+            win.removeMenu();
+            win.setMenuBarVisibility(false);
+        }
+
         win.loadURL("https://senpa.io/web", {
-            extraHeaders: `x-senpa-io-client-version: ${app.getVersion()}\n`
+            extraHeaders: `x-senpa-io-client-version: ${app.getVersion()}\n`,
         });
 
         webBlocker.filter(win);
@@ -172,7 +177,7 @@ class WindowBuilder {
             // wait 3 seconds to show the splash screen.
             Promise.all([
                 WindowBuilder.#sleep(3000),
-                WindowBuilder.#initBlocker()
+                WindowBuilder.#initBlocker(),
             ]).then(() => {
                 splash.close();
                 main.show();
