@@ -13,6 +13,7 @@ const WindowBuilder = require("./modules/windowBuilder");
 const RPCHandler = require("./modules/rpcHandler");
 
 const env = process.env?.NODE_ENV || "development";
+process.env.APP_VERSION = require("../package.json").version;
 
 console.log(`
    ____                           _       
@@ -23,7 +24,7 @@ console.log(`
                    |_|                    
 
 Senpa.io :: Official Client v${app.getVersion()}
-{ Environment: ${env}, Electron: ${process.versions.electron}, Node: ${process.versions.node}, Chromium: ${process.versions.chrome}, V8: ${process.versions.v8} }
+{ Environment: ${env}, Version: ${process.env.APP_VERSION}, Electron: ${process.versions.electron}, Node: ${process.versions.node}, Chromium: ${process.versions.chrome}, V8: ${process.versions.v8} }
 `);
 
 // Preparation
