@@ -65,6 +65,7 @@ class WindowBuilder {
             fullscreenable: false,
             transparent: true,
             webPreferences: {
+                preload: path.join(__dirname, "../scripts/splash.js"),
                 contextIsolation: false,
                 nodeIntegration: false,
                 spellcheck: false,
@@ -113,6 +114,9 @@ class WindowBuilder {
      */
     static #splashScreen(){
         const win = new BrowserWindow(WindowBuilder.#splashWindowOptions);
+
+        ipcMain.handle("get-version", () => process.env.APP_VERSION);
+
         win.loadFile(path.join(__dirname, "..", "layout", "splash.html"));
         return win;
     }
