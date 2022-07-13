@@ -22,6 +22,7 @@ class WindowBuilder {
      *
      * @static
      * @getter
+     * @ignore
      * @returns {import("electron").BrowserWindowConstructorOptions}
      * @memberof WindowBuilder
      */
@@ -49,6 +50,7 @@ class WindowBuilder {
      *
      * @static
      * @getter
+     * @ignore
      * @returns {import("electron").BrowserWindowConstructorOptions}
      * @memberof WindowBuilder
      */
@@ -75,6 +77,7 @@ class WindowBuilder {
      * Initialize the web blocker.
      *
      * @static
+     * @ignore
      * @returns {Promise<any>}
      * @memberof WindowBuilder
      */
@@ -104,6 +107,7 @@ class WindowBuilder {
      * Create the splash screen.
      *
      * @static
+     * @ignore
      * @returns {BrowserWindow}
      * @memberof WindowBuilder
      */
@@ -117,6 +121,7 @@ class WindowBuilder {
      * Create the main screen.
      *
      * @static
+     * @ignore
      * @returns {BrowserWindow}
      * @memberof WindowBuilder
      */
@@ -163,6 +168,7 @@ class WindowBuilder {
      * Wait for a given amount of milliseconds.
      *
      * @static
+     * @ignore
      * @returns {Promise<any>}
      * @memberof WindowBuilder
      */
