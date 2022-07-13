@@ -12,7 +12,7 @@ const CliSwitches = require("./modules/cliSwitches");
 const WindowBuilder = require("./modules/windowBuilder");
 const RPCHandler = require("./modules/rpcHandler");
 
-const env = process.env?.NODE_ENV || "development";
+const env = process.env?.NODE_ENV || "production";
 process.env.APP_VERSION = require("../package.json").version;
 
 console.log(`
