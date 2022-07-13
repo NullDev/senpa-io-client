@@ -3,7 +3,11 @@
   "version": "1.2.2",
   "private": true,
   "description": "Official client for Senpa.io",
-  "author": "NullDev",
+  "author": {
+    "name" : "NullDev",
+    "email" : "shadow@nulldev.org",
+    "url" : "https://nulldev.org"
+  },
   "license": "AGPL-3.0-only",
   "engines": {
     "node": ">=18.2.0"
