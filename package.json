@@ -18,6 +18,7 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder --publish always",
     "build": "electron-builder",
+    "build:deb": "npm run build -- --linux deb --x64",
     "release": "electron-builder",
     "postinstall": "electron-builder install-app-deps"
   },
