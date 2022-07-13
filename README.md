@@ -11,21 +11,26 @@
 ## :arrow_down: Download
 
 - Windows Installer:
-  - [Windows installer (32-Bit)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-setup-win.exe)
-  - [Windows installer (64-Bit)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-setup-win-x64.exe) 
-  - [Windows installer (ia32)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-setup-win-ia32.exe)
-  - [Windows installer (arm64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-setup-win-arm64.exe)
-- Windows portable EXE:
-  - [Windows portable (32-Bit)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-win.exe)
-  - [Windows portable (64-Bit)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-win-x64.exe) 
-  - [Windows portable (ia32)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-win-ia32.exe)
-  - [Windows portable (arm64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-win-arm64.exe)
-- MacOS:
-  - [macOS portable (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-mac-x64.dmg) 
-  - [macOS portable (arm64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-mac-arm64.dmg)
-- Linux:
-  - [Linux portable (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-x86_64.AppImage)
-  - [Linux portable (arm64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-arm64.AppImage)
+  - [Windows installer exe (32-Bit)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-setup-win.exe)
+  - [Windows installer exe (64-Bit)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-setup-win-x64.exe) 
+  - [Windows installer exe (ia32)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-setup-win-ia32.exe)
+  - [Windows installer exe (arm64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-setup-win-arm64.exe)
+- Windows Portable:
+  - [Windows portable exe (32-Bit)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-win.exe)
+  - [Windows portable exe (64-Bit)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-win-x64.exe) 
+  - [Windows portable exe (ia32)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-win-ia32.exe)
+  - [Windows portable exe (arm64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-win-arm64.exe)
+- MacOS Portable:
+  - [MacOS portable dmg (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-mac-x64.dmg) 
+  - [MacOS portable dmg (arm64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-mac-arm64.dmg)
+- Linux Installer:
+  - [Linux installer deb (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-x86_64.deb)
+  - [Linux installer deb (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-arm64.deb)
+  - [Linux installer rpm (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-x86_64.rpm)
+  - [Linux installer rpm (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-arm64.rpm)
+- Linux Portable:
+  - [Linux portable AppImage (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-x86_64.AppImage)
+  - [Linux portable AppImage (arm64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-arm64.AppImage)
 
 <sub>[Latest release / changelog](https://github.com/NullDev/senpa-io-client/releases/latest)</sub>
 
