@@ -6,7 +6,7 @@
 
 const path = require("node:path");
 
-const { app, BrowserWindow, shell, ipcMain } = require("electron");
+const { BrowserWindow, shell, ipcMain } = require("electron");
 const webBlocker = require("electron-web-blocker");
 
 const env = process.env?.NODE_ENV || "development";
@@ -151,7 +151,7 @@ class WindowBuilder {
         });
 
         win.loadURL("https://senpa.io/web", {
-            extraHeaders: `x-senpa-io-client-version: ${app.getVersion()}\n`,
+            extraHeaders: `x-senpa-io-client-version: ${process.env.APP_VERSION}\n`,
         });
 
         webBlocker.filter(win);
