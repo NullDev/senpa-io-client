@@ -1,12 +1,12 @@
 {
   "name": "senpa-io-client",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": true,
   "description": "Official client for Senpa.io",
   "author": {
-    "name" : "NullDev",
-    "email" : "shadow@nulldev.org",
-    "url" : "https://nulldev.org"
+    "name": "NullDev",
+    "email": "shadow@nulldev.org",
+    "url": "https://nulldev.org"
   },
   "license": "AGPL-3.0-only",
   "engines": {
