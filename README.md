@@ -36,7 +36,7 @@
 
 <hr>
 
-## :wrench: Installation [Developers only!]
+## :wrench: Build it from source [Developers only!]
 
 0. Open up your favourite terminal (and navigate somewhere you want to download the repository to). <br><br>
 1. Make sure you have NodeJS installed. Test by entering <br>
