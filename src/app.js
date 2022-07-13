@@ -10,6 +10,9 @@ const { app } = require("electron");
 
 const CliSwitches = require("./modules/cliSwitches");
 const WindowBuilder = require("./modules/windowBuilder");
+const RPCHandler = require("./modules/rpcHandler");
+
+const env = process.env?.NODE_ENV || "development";
 
 console.log(`
    ____                           _       
@@ -20,7 +23,7 @@ console.log(`
                    |_|                    
 
 Senpa.io :: Official Client v${app.getVersion()}
-{ Electron: ${process.versions.electron}, Node: ${process.versions.node}, Chromium: ${process.versions.chrome} }
+{ Environment: ${env}, Electron: ${process.versions.electron}, Node: ${process.versions.node}, Chromium: ${process.versions.chrome}, V8: ${process.versions.v8} }
 `);
 
 // Preparation
@@ -29,9 +32,15 @@ app.setAppUserModelId(process.execPath);
 
 CliSwitches.applySwitches(app);
 
+const rpcHandler = new RPCHandler("996574143623479387");
+rpcHandler.init();
+
 app.once("ready", () => WindowBuilder.createWindow());
 
-app.on("quit", () => app.quit());
+app.on("quit", async() => {
+    await rpcHandler.destroy();
+    app.quit();
+});
 
 app.on("window-all-closed", () => ((process.platform !== "darwin")
     ? app.quit()

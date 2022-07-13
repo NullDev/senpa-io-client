@@ -4,9 +4,17 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
+const { ipcRenderer } = require("electron");
+
 const BANNER_IDS = [
     "#gameadsbanner",
-    "#banner_ad_bottom"
+    "#banner_ad_bottom",
+    "#ad-slot-center-panel",
+];
+
+const MAY_APPEAR = [
+    "#onesignal-slidedown-container",
+    ".adsbygoogle",
 ];
 
 /**
@@ -14,6 +22,24 @@ const BANNER_IDS = [
  */
 const disableConsole = function(){
     for (const el in console) window.console[el] = () => {};
+};
+
+/**
+ * Generate CSS for disabling Ads.
+ *
+ * @returns {String}
+ */
+const buildAntiBannerCss = () => `${BANNER_IDS.join(",")},${MAY_APPEAR.join(",")}{display:none!important;}`;
+
+/**
+ * Inject CSS into the head.
+ *
+ * @param {String} css
+ */
+const injectCss = function(css){
+    const style = document.createElement("style");
+    style.innerHTML = css;
+    document.head.appendChild(style);
 };
 
 /**
@@ -46,17 +72,19 @@ const waitForElement = function(selector){
 
     document.addEventListener("DOMContentLoaded", () => {
         BANNER_IDS.forEach(id => waitForElement(id)
-            .then(el => (el.style.display = "none"))
+            .then(el => el.remove()),
         );
+
+        injectCss(buildAntiBannerCss());
+
+        const menuBanner = document.querySelector(".advertisement-informer");
+        if (!!menuBanner) menuBanner.innerHTML = "Senpa.io :: Client";
+
+        const endBanner = document.querySelector(".advertisement-informer-endgame");
+        if (!!endBanner) endBanner.innerHTML = "Senpa.io :: Client";
     });
 
     document.addEventListener("keydown", event => {
-        if (event.code === "Escape") document.exitPointerLock();
-
-        else if (event.code === "F11"){
-            document.fullscreenElement
-                ? document.exitFullscreen()
-                : document.body.requestFullscreen();
-        }
+        if (event.code === "F11") ipcRenderer.send("togglefullscreen");
     });
 })();

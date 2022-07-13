@@ -1,6 +1,6 @@
 {
   "name": "senpa-io-client",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "private": true,
   "description": "Official client for Senpa.io",
   "author": "NullDev",
@@ -10,11 +10,11 @@
   },
   "main": "src/app.js",
   "scripts": {
-    "start": "electron src/app.js",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder --publish always",
-    "build": "electron-builder",
-    "release": "electron-builder",
+    "start": "NODE_ENV=development electron src/app.js",
+    "pack": "NODE_ENV=production electron-builder --dir",
+    "dist": "NODE_ENV=production electron-builder --publish always",
+    "build": "NODE_ENV=production electron-builder",
+    "release": "NODE_ENV=production electron-builder",
     "postinstall": "electron-builder install-app-deps"
   },
   "repository": {
@@ -32,11 +32,12 @@
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/eslint-parser": "^7.18.2",
-    "electron": "^19.0.6",
+    "electron": "^19.0.8",
     "electron-builder": "^23.1.0",
     "eslint": "^8.18.0"
   },
   "dependencies": {
+    "discord-rpc": "^4.0.1",
     "electron-web-blocker": "^1.0.5",
     "v8-compile-cache": "^2.3.0"
   }
