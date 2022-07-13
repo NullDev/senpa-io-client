@@ -10,71 +10,7 @@
         <!-- // = Copyright (c) NullDev = // -->
         <!-- // ========================= // -->
 
-        <style>
-            body {
-                background-color: #222;
-                overflow: hidden;
-                font-family: "Arial", sans-serif;
-				font-size: 18px;
-				user-select: none;
-
-                height: 100vh;
-                width: 100vw;
-                padding: 0;
-                margin: 0;
-            }
-
-            img {
-                width: 100%;
-                height: auto;
-            }
-
-            h1 {
-                color: #FFF;
-                text-align: center;
-                margin: 0;
-            }
-
-            #content {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 85%;
-            }
-
-            #cursor {
-                display: inline-block;
-                background: #FE70C3;
-                margin-left: 3px;
-                animation: blink 0.8s infinite;
-                -webkit-animation: blink 0.8s infinite;
-                width: 16px;
-                height: 30px;
-                margin-bottom: -2px;
-            }
-
-            p#poweredby {
-                position: absolute;
-                top: 5px;
-                right: 10px;
-                margin: 0;
-                font-size: 15px;
-                color: #ffffff29;
-            }
-
-            @keyframes blink {
-                0%   { background: #222;    }
-                50%  { background: #FE70C3; }
-                100% { background: #222;    }
-            }
-
-            @-webkit-keyframes blink {
-                0%   { background: #222;    }
-                50%  { background: #FE70C3; }
-                100% { background: #222;    }
-            }
-        </style>
+        <link rel="stylesheet" href="splash.css">
     </head>
     <body>
         <div id="content">
@@ -82,5 +18,6 @@
             <h1>Official Client - Loading <span id="cursor"></span></h1>
         </div>
         <p id="poweredby">Powered by NullDev.org</p>
+        <p id="version"></p>
     </body>
 </html>
