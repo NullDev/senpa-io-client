@@ -24,10 +24,10 @@
   - [MacOS portable dmg (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-mac-x64.dmg) 
   - [MacOS portable dmg (arm64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-mac-arm64.dmg)
 - Linux Installer:
-  - [Linux installer deb (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-x86_64.deb)
-  - [Linux installer deb (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-arm64.deb)
+  - [Linux installer deb (amd64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-amd64.deb)
+  - [Linux installer deb (arm64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-arm64.deb)
   - [Linux installer rpm (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-x86_64.rpm)
-  - [Linux installer rpm (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-arm64.rpm)
+  - [Linux installer rpm (aarch64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-aarch64.rpm)
 - Linux Portable:
   - [Linux portable AppImage (x86_64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-x86_64.AppImage)
   - [Linux portable AppImage (arm64)](https://github.com/NullDev/senpa-io-client/releases/latest/download/senpa-io-client-portable-linux-arm64.AppImage)
