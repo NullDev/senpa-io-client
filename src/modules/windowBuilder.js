@@ -6,7 +6,7 @@
 
 const path = require("node:path");
 
-const { app, BrowserWindow, shell } = require("electron");
+const { app, BrowserWindow, shell, ipcMain } = require("electron");
 const webBlocker = require("electron-web-blocker");
 
 const env = process.env?.NODE_ENV || "development";
@@ -22,7 +22,7 @@ class WindowBuilder {
      *
      * @static
      * @getter
-     * @returns {Object}
+     * @returns {import("electron").BrowserWindowConstructorOptions}
      * @memberof WindowBuilder
      */
     static get #mainWindowOptions(){
@@ -33,7 +33,7 @@ class WindowBuilder {
             show: false,
             center: true,
             title: "Senpa.io :: Official Client",
-            fullscreenable: true,
+            fullscreen: false,
             webPreferences: {
                 preload: path.join(__dirname, "../scripts/preload.js"),
                 contextIsolation: false,
@@ -49,7 +49,7 @@ class WindowBuilder {
      *
      * @static
      * @getter
-     * @returns {Object}
+     * @returns {import("electron").BrowserWindowConstructorOptions}
      * @memberof WindowBuilder
      */
     static get #splashWindowOptions(){
@@ -127,6 +127,19 @@ class WindowBuilder {
             win.removeMenu();
             win.setMenuBarVisibility(false);
         }
+
+        let fullscreen = false;
+        ipcMain.on("togglefullscreen", () => {
+            if (fullscreen){ // Toggle Off
+                win.setFullScreen(false);
+                win.setAlwaysOnTop(true, "floating");
+            }
+            else { // Toggle On
+                win.setAlwaysOnTop(true, "screen-saver");
+                win.setFullScreen(true);
+            }
+            fullscreen = !fullscreen;
+        });
 
         win.loadURL("https://senpa.io/web", {
             extraHeaders: `x-senpa-io-client-version: ${app.getVersion()}\n`,
