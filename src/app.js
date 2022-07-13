@@ -23,7 +23,7 @@ console.log(`
   |____/ \\___|_| |_| .__/ \\__,_(_)_|\\___/ 
                    |_|                    
 
-Senpa.io :: Official Client v${app.getVersion()}
+Senpa.io :: Official Client v${process.env.APP_VERSION}
 { Environment: ${env}, Version: ${process.env.APP_VERSION}, Electron: ${process.versions.electron}, Node: ${process.versions.node}, Chromium: ${process.versions.chrome}, V8: ${process.versions.v8} }
 `);
 
