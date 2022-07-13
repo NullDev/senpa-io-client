@@ -21,7 +21,7 @@ mac:
         - arm64
 linux:
   artifactName: ${productName}-portable-${os}-${arch}.${ext}
-  icon: ./build/icon.icns
+  icon: ./build/icon.png
   target:
     - target: appImage
       arch:
