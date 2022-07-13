@@ -25,7 +25,7 @@ class CliSwitches {
             ["force_high_performance_gpu"],
             ["disable-frame-rate-limit"],
             ["disable-gpu-vsync"],
-            ["disable-accelerated-2d-canvas", "true"],
+            // ["disable-accelerated-2d-canvas", "false"], // Game is fully 2D so this is not needed.
             ["ignore-gpu-blacklist"],
             ["disable-breakpad"], // Disable crash reporting
             ["disable-print-preview"],
@@ -49,7 +49,7 @@ class CliSwitches {
             ["enable-zero-copy"],
             ["no-pings"],
             ["no-proxy-server"],
-            ["disable-gpu-vsync"],
+            // ["disable-gpu-vsync"], // not needed for now
         ];
     }
 
