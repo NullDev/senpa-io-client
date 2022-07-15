@@ -24,6 +24,8 @@ class CliSwitches {
             ["autoplay-policy", "no-user-gesture-required"],
             ["force_high_performance_gpu"],
             ["disable-frame-rate-limit"],
+            ["limit-fps", "800"],
+            ["max-gum-fps", "800"],
             ["disable-gpu-vsync"],
             // ["disable-accelerated-2d-canvas", "false"], // Game is fully 2D so this is not needed.
             ["ignore-gpu-blacklist"],
@@ -63,7 +65,7 @@ class CliSwitches {
      */
     static applySwitches(app){
         for (const [ option, value ] of CliSwitches.#switches){
-            app.commandLine.appendSwitch(option, value);
+            app.commandLine.appendSwitch(option, value || undefined);
         }
     }
 }
