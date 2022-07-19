@@ -38,11 +38,11 @@
     "@babel/core": "^7.18.9",
     "@babel/eslint-parser": "^7.18.9",
     "electron": "^19.0.8",
+    "electron-builder": "^23.1.0",
     "eslint": "^8.20.0"
   },
   "dependencies": {
     "discord-rpc": "^4.0.1",
-    "electron-builder": "^23.1.0",
     "electron-web-blocker": "^1.0.5",
     "v8-compile-cache": "^2.3.0"
   }
