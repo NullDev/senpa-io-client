@@ -25,6 +25,14 @@ const disableConsole = function(){
 };
 
 /**
+ * Hook requestAnimationFrame to limit FPS.
+ *//*
+const hookRAF = function(){
+    const originalRAF = window.requestAnimationFrame;
+    window.requestAnimationFrame = callback => originalRAF(() => callback(new Date().getTime()));
+}; */
+
+/**
  * Generate CSS for disabling Ads.
  *
  * @returns {String}
@@ -69,6 +77,7 @@ const waitForElement = function(selector){
 
 (() => {
     disableConsole();
+    // hookRAF();
 
     document.addEventListener("DOMContentLoaded", () => {
         BANNER_IDS.forEach(id => waitForElement(id)
