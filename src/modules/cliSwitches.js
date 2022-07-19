@@ -23,11 +23,10 @@ class CliSwitches {
         return [
             ["autoplay-policy", "no-user-gesture-required"],
             ["force_high_performance_gpu"],
-            ["disable-frame-rate-limit"],
+            // ["disable-frame-rate-limit"],
             ["limit-fps", "800"],
             ["max-gum-fps", "800"],
             ["disable-gpu-vsync"],
-            // ["disable-accelerated-2d-canvas", "false"], // Game is fully 2D so this is not needed.
             ["ignore-gpu-blacklist"],
             ["disable-breakpad"], // Disable crash reporting
             ["disable-print-preview"],
@@ -51,7 +50,6 @@ class CliSwitches {
             ["enable-zero-copy"],
             ["no-pings"],
             ["no-proxy-server"],
-            // ["disable-gpu-vsync"], // not needed for now
         ];
     }
 
