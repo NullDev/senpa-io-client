@@ -38,7 +38,7 @@
     "@babel/core": "^7.18.9",
     "@babel/eslint-parser": "^7.18.9",
     "electron": "^22.3.25",
-    "electron-builder": "^23.1.0",
+    "electron-builder": "^23.6.0",
     "eslint": "^8.20.0"
   },
   "dependencies": {
